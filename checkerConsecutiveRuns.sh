@@ -23,7 +23,7 @@ B=$COUNTER
 
 # it can be improved: when I discover two different files call "exit 1"
 until [ $B -lt 1 ]; do
-	diff ./tests/$A ./tests/$B >> $file # $file will be created if there are differences
+	diff ./tests/$A ./tests/$B >> $file # $file will be created or info will be appended to it
 	let A-=1
 	let B-=1
 done
